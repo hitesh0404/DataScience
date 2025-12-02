@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Predict Page
+{% endblock %}
+
+{% block main %}
+<form action="/prediction" method="post" >
+    <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input
+            type="number"
+            class="form-control"
+            name="age"
+            id="age"
+            aria-describedby="helpId"
+            placeholder="Enter Your age for prediction"
+            required
+        />
+        <small id="helpId" class="form-text text-muted">We will not share your data!</small>
+    </div>
+    
+        <button
+            type="submit"
+            class="btn btn-primary"
+        >
+            Submit and lets see prediction
+        </button>
+        
+        
+    </form>
+  {% endblock %}
